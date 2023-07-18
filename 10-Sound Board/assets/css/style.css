@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(184, 45, 226);
+    font-family: sans-serif;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+    gap: 20px;
+}
+#buttons{
+    display: flex;
+    gap: 20px;
+   
+
+}
+.btn{
+    padding: 26px 30px;
+    background: rgb(101, 4, 130);
+    border: none;
+    color: white;
+    font-size: 24px;
+    border-radius: 10px;
+
+}
