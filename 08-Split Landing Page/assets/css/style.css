@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.split {
+    position: absolute;
+    height: 100vh;
+    width: 50%;
+    top: 0;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 1000ms ease-in-out;
+}
+
+.split.left {
+
+
+    background: url("../images/ps.jpg");
+    left: 0;
+
+}
+
+.split.left::before {
+    content: "";
+    opacity: 0.6;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: aqua;
+
+}
+
+.split.right::before {
+    content: "";
+opacity: 0.4;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background-color: black;
+
+}
+
+.split.right {
+    background: url("../images/xbox.jpg");
+    right: 0;
+
+}
+
+.container.hover_left .split.left {
+    width: 75%;
+
+}
+
+.container.hover_left .split.right {
+    width: 25%;
+
+}
+
+.container.hover_right .split.right {
+    width: 75%;
+
+}
+
+.container.hover_right .split.left {
+    width: 25%;
+
+}
+
+h1 {
+    font-size: 4rem;
+    position: absolute;
+    font-weight: bold;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+    white-space: nowrap;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+
+
+}
+
+.btn {
+    padding: 1.5rem;
+    width: 15rem;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%);
+    text-decoration: none;
+    z-index: 2;
+    border: 3px solid white;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.5);
+    transition: all 2000ms ease;
+
+}
+
+.btn.ps:hover {
+    background: rgb(6, 104, 104);
+    border-color: rgb(6, 104, 104);
+
+}
+
+.btn.xbox:hover {
+    background: green;
+    border-color: green;
+}
